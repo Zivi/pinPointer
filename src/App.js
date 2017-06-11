@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ball from './ball.jpg';
 import Intro from './Intro';
+import Container from  './Container';
 import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
           <img src={ball} alt="shiny ball"/>
           <h2>Find pinball easily, anywhere</h2>
           <Intro />
+          <Container />
       </div>
     );
   }
