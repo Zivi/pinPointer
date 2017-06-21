@@ -11,13 +11,12 @@ class Intro extends Component {
   }
 
   getLocation() {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      let pos = {
+    navigator.geolocation.getCurrentPosition(position => {
+      const pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      console.log('position: ', position);
-      console.log('pos: ', pos);
+      this.props.onCenter(pos);
     });
   }
 

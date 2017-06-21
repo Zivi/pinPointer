@@ -9,7 +9,7 @@ class Container extends React.Component {
     }
     return (
       <div style={style}>
-        <Map google={this.props.google} />
+        <Map google={this.props.google} center={this.props.center} />
       </div>
     )
   }

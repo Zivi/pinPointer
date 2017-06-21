@@ -5,11 +5,16 @@ export class Map extends React.Component {
     this.loadMap();
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.google !== this.props.google) {
       this.loadMap();
     }
+
+    if (prevProps.center !== this.props.center) {
+      this.map.setCenter(this.props.center);
+    }
   }
+
   loadMap() {
     if (this.props && this.props.google) {
       // google is available
@@ -19,13 +24,9 @@ export class Map extends React.Component {
       const node = ReactDOM.findDOMNode(mapRef);
 
       let zoom = 14;
-      let lat = 37.774929;
-      let lng = -122.419416;
-      const center = new maps.LatLng(lat, lng);
-      const mapConfig = Object.assign({}, {
-        center: center,
+      const mapConfig = {
         zoom: zoom
-      })
+      };
       this.map = new maps.Map(node, mapConfig);
     }
   }
@@ -35,6 +36,6 @@ export class Map extends React.Component {
       <div ref='map'>
         Loading map...
       </div>
-    )
+    );
   }
 }
