@@ -31,6 +31,7 @@ class App extends Component {
             lat: +res.location.lat,
             lng: +res.location.lon,
             locationName: res.location.name,
+            machines: res.location.machine_names
           }
         });
       });

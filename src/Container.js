@@ -13,7 +13,6 @@ class Container extends React.Component {
 
 
   onMarkerClick(props, marker) {
-    debugger;
     this.setState({
       activeMarker: marker,
       showInfoWindow: true,
@@ -21,12 +20,19 @@ class Container extends React.Component {
   }
 
   render() {
+    const { marker } = this.props;
     const style = {
       width: '100px',
       height: '100px'
     };
 
-    const { marker } = this.props;
+    if (marker) {
+      var listMachines  = marker.machines.map((machines) =>
+        <li>{machines}</li>
+      );
+    }
+
+
     return (
       <div style={style}>
         <Map google={this.props.google} center={this.props.center}>
@@ -47,7 +53,8 @@ class Container extends React.Component {
             visible={this.state.showInfoWindow}
           >
             <div>
-              <h1>{marker && marker.locationName}</h1>
+              <h4>{marker && marker.locationName}</h4>
+              <ul>{marker && listMachines}</ul>
             </div>
           </InfoWindow>
 
