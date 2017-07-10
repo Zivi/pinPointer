@@ -1,1 +1,1 @@
-Mobile-friendly pinball locator webapp. Built in react using the pinball mapper API.
+Mobile-friendly pinball locator webapp. Built in react using the Pinball Map API.
