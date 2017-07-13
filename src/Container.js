@@ -19,6 +19,15 @@ class Container extends React.Component {
     });
   }
 
+  onMapClicked(){
+    if (this.state.showInfoWindow) {
+      this.setState({
+        showInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  }
+
   render() {
     const { marker } = this.props;
 
@@ -31,7 +40,11 @@ class Container extends React.Component {
 
     return (
       <div>
-        <Map className='map-container'  google={this.props.google} center={this.props.center}>
+        <Map className='map-container'
+          google={this.props.google}
+          center={this.props.center}
+          onClick={this.onMapClicked.bind(this)}
+        >
           {marker ?
             <Marker
               position={{ lat: marker.lat, lng: marker.lng}}
