@@ -24,7 +24,6 @@ class Intro extends Component {
   render () {
     return (
       <section className="Intro">
-        <h3>Welcome</h3>
         <button onClick={this.findLocation.bind(this)}>Find the closest pinball to me!</button>
       </section>
     );

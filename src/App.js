@@ -40,9 +40,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Pin Pointer</h1>
-        <img src={ball} alt="shiny ball"/>
-        <h2>Find pinball easily, anywhere</h2>
+        <h1 id='app-head'>
+          Pin Pointer
+          <img className='img-ball' src={ball} alt="shiny ball"/>
+        </h1>
         <Intro onCenter={this.recenter.bind(this)} />
         <Container center={this.state.center} marker={this.state.pinballSpot}/>
       </div>

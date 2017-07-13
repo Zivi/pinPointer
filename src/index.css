@@ -2,4 +2,42 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+}
+#root {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#app-head {
+  position: relative;
+  color: #363ed1;
+}
+
+button {
+  border-radius: 10px;
+  height: 30px;
+  border: 1px solid grey;
+  background-color: #dd4139;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.img-ball {
+  height: 2em;
+  position: absolute;
+  top: -20px;
+}
+
+.map-container {
+  /* !important is used because inline styles is overwritten by maps */
+  width: 90vw !important;
+  height: 75vh !important;
 }

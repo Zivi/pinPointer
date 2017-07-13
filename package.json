@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "google-maps-react": "^1.0.19",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.2.0",
+    "eslint-plugin-flowtype": "^2.33.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",
